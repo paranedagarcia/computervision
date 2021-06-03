@@ -16,10 +16,13 @@ while True:
 
     autos = face_cascade.detectMultiScale(gray,
       scaleFactor = 1.1,
-      minNeighbors = 8,
+      minNeighbors = 8, 
       minSize = (20,20),
       maxSize = (200,200)
     )
+# minNeighbors, for gouped boxes and detect object
+# minSize,
+# maxSize, 
 
     # Draw a rectangle around the faces
     for (x, y, w, h) in autos:
