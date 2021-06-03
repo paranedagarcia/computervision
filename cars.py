@@ -21,8 +21,8 @@ while True:
       maxSize = (200,200)
     )
 # minNeighbors, for gouped boxes and detect object
-# minSize,
-# maxSize, 
+# minSize, min size of the box for detect object
+# maxSize, max of the box to detect object
 
     # Draw a rectangle around the faces
     for (x, y, w, h) in autos:
