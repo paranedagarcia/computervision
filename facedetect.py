@@ -6,7 +6,9 @@ import numpy as np
 faceClassif = cv2.CascadeClassifier('data/haarcascade_frontalface_default.xml')
 
 image = cv2.imread('images/workshop.jpg')
-#gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+image = np.array(image, dtype=np.uint8) # cambia a 8 bit para gray
+
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 faces = faceClassif.detectMultiScale(image,
   scaleFactor = 1.1,
