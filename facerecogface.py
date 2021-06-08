@@ -13,7 +13,9 @@ face_recon = cv2.face.EigenFaceRecognizer_create()
 
 face_recon.read('data/modelEigenface.xml')
 
-cap = cv2.VideoCapture('data/patricio.mov')
+# prueba del modelo
+cap = cv2.VideoCapture(3) # desde webcam
+#cap = cv2.VideoCapture('data/patricio.mov') # desde un video
 
 faceClassif = cv2.CascadeClassifier('data/haarcascade_frontalface_default.xml')
 
@@ -37,8 +39,8 @@ while True:
         cv2.putText(frame, '{}'.format(personas[0]), (x,y -30), 1, 1.4,(0,255,0),1, cv2.LINE_AA)
 
     cv2.imshow('frame', frame)
-    key = cv2.waitKey(1)
-    if key == 27:
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 cap.release()

@@ -1,6 +1,7 @@
 # Fase 1 - Reconocimiento de caras
 # Detecta y captura imagenes para entrenamiento
-# ...
+# Crea tu propio set de  imagenes de entrenamiento
+
 import cv2
 import os
 import imutils
@@ -12,8 +13,8 @@ personaPath = dataPath + '/'+ persona
 if not os.path.exists(personaPath):
     os.makedirs(personaPath)
 
-#cap = cv2.VideoCapture(3) # stream capture
-cap = cv2.VideoCapture("data/patricio.mov") # video capture
+cap = cv2.VideoCapture(3) # stream capture
+#cap = cv2.VideoCapture("data/patricio.mov") # video capture
 
 faceClassif = cv2.CascadeClassifier('data/haarcascade_frontalface_default.xml')
 count = 0
