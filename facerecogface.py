@@ -6,7 +6,8 @@ import os
 import imutils
 
 dataPath = '/Users/patricio/git/computervision/data'
-personas = [filename for filename in os.listdir(dataPath) if os.path.isdir(os.path.join(dataPath, filename))] # captura lista de directorios dentro de al ruta dataPath
+# captura lista de directorios dentro de la ruta dataPath, un directorio por persona
+personas = [filename for filename in os.listdir(dataPath) if os.path.isdir(os.path.join(dataPath, filename))] 
 print('Rostros: ', personas)
 
 face_recon = cv2.face.EigenFaceRecognizer_create()
