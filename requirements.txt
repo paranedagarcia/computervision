@@ -1,1 +1,9 @@
-numpy==2.3.4
+# numpy==2.3.4
+
+# PyTorch: use a valid release range instead of a non-existent pin like torch==2.7.1
+# Note: pick the right build for your machine (CPU vs CUDA). If pip fails, follow
+# the instructions at https://pytorch.org/get-started/locally to get the correct
+# index URL for CUDA/CPU wheels.
+torch>=2.0.0,<3.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
